@@ -94,7 +94,6 @@ const styles = {
   },
   subText: {
     fontSize: '1.5rem', // Smaller size for the subtext
-    marginTop: '1rem',
     color: '#fff', // White color for subtext
   },
   increase: {
