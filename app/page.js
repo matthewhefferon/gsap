@@ -54,7 +54,7 @@ export default function Home() {
     <div style={styles.container}>
       <div style={styles.wrapper}>
         <h1 ref={textRef} style={styles.text}>
-          You Had <span ref={numberRef} style={styles.number}>420k</span> in Sales
+          You had <span ref={numberRef} style={styles.number}>420k</span> in sales.
         </h1>
         <h2 ref={subTextRef} style={styles.subText}>
           That's a <span style={styles.increase}>69%</span> increase from last month 🚀
