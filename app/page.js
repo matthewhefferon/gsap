@@ -9,6 +9,7 @@ export default function Home() {
   const textRef = useRef(null);
   const numberRef = useRef(null);
   const subTextRef = useRef(null);
+  const rocketRef = useRef(null);
 
   useEffect(() => {
     const handleConfetti = () => {
@@ -40,6 +41,10 @@ export default function Home() {
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 1, ease: 'power3.out' },
       "-=0.5"
+    )
+    .to(
+      rocketRef.current,
+      { x: 1000, y: -1000, duration: 2, ease: 'power3.out', delay: 1 }
     );
 
     numberRef.current.addEventListener('mouseenter', handleConfetti);
@@ -57,7 +62,7 @@ export default function Home() {
           You had <span ref={numberRef} style={styles.number}>420k</span> in sales.
         </h1>
         <h2 ref={subTextRef} style={styles.subText}>
-          That's a <span style={styles.increase}>69%</span> increase from last month 🚀
+          That's a <span style={styles.increase}>69%</span> increase from last month <span ref={rocketRef} style={styles.rocket}>🚀</span>
         </h2>
       </div>
     </div>
@@ -100,6 +105,9 @@ const styles = {
     color: '#ffeb3b', // Yellow for the increase percentage
     fontSize: '2rem', // Slightly larger for emphasis
     fontWeight: 'bold',
+    display: 'inline-block',
+  },
+  rocket: {
     display: 'inline-block',
   },
 };
